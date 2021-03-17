@@ -19,6 +19,14 @@
 
 ## Usage
 
-Specify a single address (or a file containing URLs) using `-u/--url` flag.
+usage: unchain [-h|--help] -u|--url "<value>"
+
+
+
+Arguments:
+
+  -h  --help  Print help information
+  -u  --url   File containing urls or a single url
+
 
 
