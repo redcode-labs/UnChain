@@ -9,24 +9,22 @@
   A tool to find redirection chains in multiple URLs
 </p>
 
-
-
 ## Introduction
+UnChain automates process of finding and following `30X` redirects by extracting "Location" header of HTTP responses.
 
-<p>
-  UnChain automates process of finding and following `30X` redirects by extracting "Location" header of HTTP responses.
-</p>
+### Building
+To build UnChain simple run:
+```
+go build -o unchain ./cmd/main.go
+```
 
 ## Usage
 
+```
 usage: unchain [-h|--help] -u|--url "<value>"
 
-
-
-Arguments:
+arguments:
 
   -h  --help  Print help information
   -u  --url   File containing urls or a single url
-
-
-
+```
