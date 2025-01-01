@@ -28,14 +28,14 @@ func findRedirects(url string) {
 			cf.PrintError(err.Error())
 		}
 		nextUrl = res.Header.Get("Location")
-		sc := cf.IntToStr(res.StatusCode)
+		sc := cf.Int2Str(res.StatusCode)
 		urlColor := cf.Red
 		u := nextUrl
 		if sc == "200" {
 			urlColor = cf.Green
 			u = url
 		}
-		id := cf.IntToStr(i)
+		id := cf.Int2Str(i)
 		tableData = append(tableData, []string{id, urlColor(u), sc})
 		if sc == "200" {
 			break
@@ -77,7 +77,7 @@ func main() {
 	cf.ExitOnError(err)
 	var urls []string
 	if cf.Exists(*URLS) {
-		urls = cf.FileToSlice(*URLS)
+		urls = cf.File2Slice(*URLS)
 	} else {
 		urls = []string{*URLS}
 	}
